@@ -48,3 +48,49 @@ var num1 = 10;
 var num2 = 100;
 var str = "10 加 100 的數字會是" + (num1 + num2);
 console.log(str)
+
+
+//正號 + 與負號 -
+//正號 + 與負號 - 分別用來表示數字的「正數」與「負數」的狀態。
+var a = +10;
+var b = -10;
+console.log(a);       // 10
+console.log(b);       // -10
+
+//若是正號 + 與負號 - 後面帶的並不是一個數字型態的值
+//JavaScript 會在背後先透過 Number() 的方法嘗試著將其轉型
+var a = "+10";
+var b = "-10";
+var c = "Hello";
+
+console.log( +a );      // 10
+console.log( -a );      // -10
+console.log( +b );      // -10
+console.log( -b );      // 10
+console.log( +c );      // NaN
+console.log( -c );      // NaN
+
+//遞增 ++ 與遞減 --
+//更常見的一元運算子就屬「遞增」 ++ 與「遞減」 --
+//當變數遇上了 ++ 就會加一，而 -- 就會減一：
+
+var a = 10;
+a++;
+console.log(a);  // 11
+
+a--;
+console.log(b)  // 9
+
+
+//比較運算子 (Comparison Operators)
+//「相等」 == 與 「全等」 ===
+//一個等號 = 的情況很單純，是「指定、賦值」的意思，像：
+var a = 10;
+
+//「三個等號 === 不會替數值做自動轉型」
+var a = 10;
+var b = "10";
+console.log( a == b );      // true
+console.log( a === b );     // false
+
+
