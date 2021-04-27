@@ -47,3 +47,51 @@ console.log(a1,b1,c1)
 var a2;    // undefined, 尚未給值，未定義
 var b2 = null;    // null, 明確代表此變數沒有值
 console.log(a2,b2)
+
+
+
+/*
+Before ES6
+在 ES6 之前，只有兩種 scope
+
+全域活動範圍(global scope)
+函數活動範圍(function scope)
+*/
+
+var myVar = 0;
+  {
+    var myVar = 1;
+    console.log("inner scope: %d\n", myVar); // 1
+  }
+console.log("main scope: %d\n", myVar); // 1
+
+/*
+ES6 以前，只能使用 var 來宣告變數，
+在函數中以 var 宣告的變數，其活動範圍僅在函數內，
+外部無法使用，而沒有用 var 或是在函數外宣告的變數，就屬於全域範圍
+*/
+
+
+//從ES6開始，多了兩種宣告變數的方式：let、const
+//let 不同於var , 它是以區塊為活動範圍
+//可以在for 、if 、純區塊中，使用let宣告以區塊為活動範圍的變數
+
+let myVar1 = 0 ;
+    {
+        let myVar1 = 1 ;
+        console.log('inner scope: %d\n', myVar1);
+    }
+console.log('main scope: %d\n', myVar1);
+
+//let vs var 區別
+/*
+let 禁止在同一活動範圍中再次宣告相同名稱的變數
+var 會無視第二次宣告，直接指派變數值。
+let 禁止在宣告變數之前就使用它。
+*/
+
+
+//const 常數
+//無法再更動其值，也是常數的概念，若試圖改變const宣告的變數，會產生語法錯誤
+
+
