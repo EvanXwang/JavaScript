@@ -10,3 +10,32 @@ function square(number) {
 square(2);        // 4
 square(3);        // 9
 square(4);        // 16
+
+
+//範例1
+function sayHi(){
+    console.log('HI');
+}
+sayHi();
+
+
+//範例2   , 也可帶入參數
+function addTwoNum(a, b){
+    return a + b;
+}
+
+var total = addTwoNum(3, 6);
+console.log(total);
+
+
+//範例3   ，物件也可以是function
+var obj = {
+    i:0,
+    add:function(){
+        obj.i++;
+    }
+}
+
+obj.add();
+obj.add();
+console.log(obj.i);
