@@ -65,3 +65,7 @@ console.log(q, w, e); //a , b , c
 //參數值為次數
 var myStr = 'abc';
 console.log(myStr.repeat(3)); //abcabcabc
+
+//使用+ 運算符號 做數值變換
+var age = +'25';
+console.log('你的年紀是：',age+1); //你的年紀是： 26

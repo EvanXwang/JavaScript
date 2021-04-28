@@ -55,6 +55,16 @@ var sayHi_1 = function (){
 }
 sayHi_1(); //say hello
 
+//函數構造器
+//範例1
+const add = new Function('a', 'b', 'return a + b');
+console.log(add(33,33)); //66
+
+//範例2
+const hello = new Function("name", "return 'hello '+ name +'.'");
+console.log(hello('evan'));
+
+
 //箭頭函數
 var sum = function(x, y){
     return x + y;
@@ -113,3 +123,35 @@ function outer() {
 var myFun = outer();
 console.log(myFun(10)); // 20
 console.log(myFun(20)); // 30
+
+
+
+//給函數分配屬性
+function helo(name){
+    if(helo.sex == 'F'){
+        console.log('你好,', name ,'女士');
+    }else{
+        console.log('你好,', name,'.');
+    }
+}
+
+helo.sex = 'F'; // 若不加此行，則不列印女士
+helo('evan'); // 你好, evan 女士
+
+
+//函數的調用堆棧
+//t
+function func1(){
+    console.log('func1():', arguments.callee.caller);
+}
+
+function func2(){
+    func1();
+}
+
+function func3(){
+    func1();
+}
+
+func2(); //func1(): [Function: func2]
+func3(); //func1(): [Function: func3]

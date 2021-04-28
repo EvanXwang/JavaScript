@@ -22,3 +22,18 @@ console.log(arr.length);
 
 arr.push('apple');
 console.log(arr);
+
+
+
+//動態綁定屬性
+const book = {
+    title: 'spider-man',
+    author: 'evan',
+    price: 999
+}
+//使用with ，則不需在寫 類似book.tile  語法
+with(book) {
+    console.log('書名:', title);
+    console.log('作者:', author);
+    console.log('價格:', price);
+}
