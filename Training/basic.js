@@ -11,14 +11,6 @@ console.log(c)
 
 
 
-//string字串
-
-//倘若要在單引號內包覆單引號，或是雙引號內包覆雙引號就會出現問題：
-// var str = 'let's go !' ;   // error
-var str = "Let's go!";    // OK
-
-//如果有非用不可的時候，可以透過 \ (跳脫字元, escape character) 來處理：
-var str = 'Let\'s go!';    // OK
 
 
 // number數字
