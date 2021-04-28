@@ -39,3 +39,77 @@ var obj = {
 obj.add();
 obj.add();
 console.log(obj.i);
+
+
+//函數的寫法有這幾種
+
+//命名函數
+function sayHi(){
+    console.log('hello');
+}
+sayHi(); // hello
+
+//匿名函數(想成把函數當作變數傳遞
+var sayHi_1 = function (){
+    console.log('say hello');
+}
+sayHi_1(); //say hello
+
+//箭頭函數
+var sum = function(x, y){
+    return x + y;
+}
+console.log(sum(3, 4)); //7
+
+//可以改寫成
+var sum1 = (x, y ) => x + y;
+console.log(sum(2, 3)); //5
+
+
+//預設參數值 ，函數可以接受參數值傳入
+function guessWhat(str = 'hi'){
+    console.log(str);
+}
+guessWhat(); // hi
+
+
+//中斷函數
+//(函數會有回傳值，也就是return ，可使用此特性中斷函數, 就是直接return 空值)
+
+function sayHi(myStr = 'hello'){
+    if(myStr == 'bye'){
+        return
+    }
+    console.log(myStr);
+}
+
+sayHi(); // hello
+sayHi('bye'); // show nothing
+
+
+
+//Closure 閉包
+//範例1
+function outer(){
+  var myStr = "a";
+  function sayHi(){
+    console.log(myStr);
+  }
+  return sayHi;
+}
+
+var myFun = outer();
+myFun(); // a
+
+//範例2
+function outer() {
+  var a = 10;
+  function addNum(b) {
+    return a + b;
+  }
+  return addNum;
+}
+
+var myFun = outer();
+console.log(myFun(10)); // 20
+console.log(myFun(20)); // 30
