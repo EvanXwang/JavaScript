@@ -40,6 +40,12 @@ obj.add();
 obj.add();
 console.log(obj.i);
 
+//
+function showMessage (username = 'Evan'){
+    console.log(`Hello ${username} , welcome to javascript`);
+}
+showMessage('jojo');
+
 
 //函數的寫法有這幾種
 
