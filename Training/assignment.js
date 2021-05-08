@@ -61,3 +61,11 @@ console.log( c || a );        // 123
 
 //簡單來說，透過 && 或 || 所產生的值不一定會是 Boolean，而是兩者其中之一。
 //&& 與 || 運算子在判斷的時候，會先對左邊的數值進行檢查。
+
+
+//三元運算子
+//condition ? val1:val2 
+//如果condition 是true ，就傳回val1的結果，否則傳回val2的結果
+var age = 2;
+var status = (age >= 18) ? '已成年':'未滿18';
+console.log(status); //未滿18歲
